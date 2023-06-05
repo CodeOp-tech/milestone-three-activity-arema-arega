@@ -10,8 +10,53 @@
 * 5. Bonus - Modifica y añade estilo al layout para que tu página "Sobre mi" tenga una aspecto más pulido.
  */
 
-function handleSubmit() {
+
+
+
+function handleSubmit(event) {
   alert("Submit!");
+  const restaurantsInput = event.target.elements.restaurantsInput.value;
+  const neighborhoodInput = event.target.elements.neighborhoodInput.value;
+  const hometownInput = event.target.elements.hometownInput.value;
+  console.log(restaurantsInput);
+  console.log(neighborhoodInput);
+  console.log(hometownInput);
+  event.preventDefault();
+  console.log("form was submitted!");
+  const restaurant = document.getElementById("restaurant");
+  const neighborhood = document.getElementById("neighborhood");
+  const hometown = document.getElementById("hometown");
+  console.log(restaurant);
+  console.log(neighborhood);
+  console.log(hometown);
+  restaurant.textContent = restaurantsInput;
+  neighborhood.textContent = neighborhoodInput;
+  hometown.textContent = hometownInput;
+  let li = document.getElementsByClassName("li");
+  console.log(li);
+  li.classname = "list-item";
+  console.log(li);
+  let image = document.createElement("image");
+  image.href = "https://static.wixstatic.com/media/c1c014_269fd3e89fd8410b9af2dc270fc9ffd9~mv2_d_3000_1500_s_2.png/v1/fill/w_560,h_250,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c1c014_269fd3e89fd8410b9af2dc270fc9ffd9~mv2_d_3000_1500_s_2.png"
+  const body = document.getElementById("body");
+  body.appendChild(image)
+
+  form.reset()
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 let form = document.querySelector("form");

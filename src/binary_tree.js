@@ -21,16 +21,38 @@ class BinaryTree {
   }
 
   // devuelve un array con todos los valores del tree recorriendo en profundidad primero preorden (actual, izquierda, derecha)
+  
   getValues() {
     let result = [];
+    result.push(this)
+    let node = null;
 
-    function traverse(node) {
-      // Tu código aquí
+    while (result.length > 0) {
+      node = result.shift();
+      result.push(node)
+
+      if (this.left) {
+        result.push(this.left)
+      }
+
+      if (this.right) {
+        result.push(this.right)
+      }
     }
-
-    traverse(this);
-    return result;
+return result
   }
+
+  function traverse(node) {
+    result = node.getValues();
+    
+    // Tu código aquí
+  }
+
+  traverse(this);
+  return result;
 }
+
+}
+
 
 module.exports = BinaryTree;

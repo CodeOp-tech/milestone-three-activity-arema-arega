@@ -3,7 +3,7 @@
  */
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Verdana, sans-serif;
 }
 
 form {
@@ -18,4 +18,8 @@ label {
 
 input {
   display: block;
+}
+
+#list-item{
+color: red;
 }
